@@ -1,5 +1,5 @@
-# Rethinking Neural Network Quantization
 # AdaBits: Neural Network Quantization with Adaptive Bit-widths
+# SAT: Neural Network Quantization with Scale-Adjusted Training
 
 SAT [arXiv](https://arxiv.org/abs/1912.10207) [BMVC2020](https://www.bmvc2020-conference.com/assets/papers/0634.pdf) | AdaBits [arXiv](https://arxiv.org/abs/1912.09666) [CVPR2020](https://openaccess.thecvf.com/content_CVPR_2020/html/Jin_AdaBits_Neural_Network_Quantization_With_Adaptive_Bit-Widths_CVPR_2020_paper.html) | [Model Zoo](#model-zoo) | [BibTex](#citing)
 
