@@ -794,14 +794,11 @@ def train_val_test():
         if val_meters is not None:
             val_meters['best_val'].cache(best_val)
         with torch.no_grad():
-            #results = run_one_epoch(
             top1_error = run_one_epoch(
                 epoch, val_loader, model_wrapper, criterion, optimizer,
                 val_meters, phase='val')
         if is_master():
-            #if results['top1_error'] < best_val:
             if top1_error < best_val:
-                #best_val = results['top1_error']
                 best_val = top1_error
                 torch.save(
                     {
@@ -827,11 +824,7 @@ def train_val_test():
 
     if is_master():
         profiling(model, use_cuda=True)
-        for m in model.modules():
-            if hasattr(m, 'alpha'):
-                mprint(m, m.alpha)
-            if hasattr(m, 'scale'):
-                mprint(m, m.scale)
+
     return
 
 

@@ -50,6 +50,11 @@ Implementing network quantization with adaptive bit-widths is straightforward:
   * Quantization training with adaptive bit-widths is implemented in the [`run_one_epoch`] function in [`train.py`](/train.py).
 
 
+## Acknowledgement
+This repo is based on [slimmable\_networks](https://github.com/JiahuiYu/slimmable_networks) and benefits from the following projects
+  * [Neural Network Distiller](https://github.com/NervanaSystems/distiller)
+
+
 ## License
 
 CC 4.0 Attribution-NonCommercial International
