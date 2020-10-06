@@ -1,7 +1,9 @@
 # Rethinking Neural Network Quantization
 # AdaBits: Neural Network Quantization with Adaptive Bit-widths
 
-[SAT arXiv](https://arxiv.org/abs/1912.10207) | [BMVC2020](https://www.bmvc2020-conference.com/assets/papers/0634.pdf) | [AdaBits arXiv](https://arxiv.org/abs/1912.09666) | [CVPR2020](https://openaccess.thecvf.com/content_CVPR_2020/html/Jin_AdaBits_Neural_Network_Quantization_With_Adaptive_Bit-Widths_CVPR_2020_paper.html) | [Model Zoo](#model-zoo) | [BibTex](#citing)
+## SAT [arXiv](https://arxiv.org/abs/1912.10207) | [BMVC2020](https://www.bmvc2020-conference.com/assets/papers/0634.pdf)
+## AdaBits [arXiv](https://arxiv.org/abs/1912.09666) | [CVPR2020](https://openaccess.thecvf.com/content_CVPR_2020/html/Jin_AdaBits_Neural_Network_Quantization_With_Adaptive_Bit-Widths_CVPR_2020_paper.html) 
+[Model Zoo](#model-zoo) | [BibTex](#citing)
 
 <!--
 <img src="https://user-images.githubusercontent.com/22609465/50390872-1b3fb600-0702-11e9-8034-d0f41825d775.png" width=95%/>
