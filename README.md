@@ -72,11 +72,14 @@ The software is for educaitonal and academic research purpose only.
 }
 @article{jin2020sat,
   title={Neural Network Quantization with Scale-Adjusted Training},
-  author={Jin, Qing and Yang, Linjie and Liao, Zhenyu and Qian, Xiaoning}
+  author={Jin, Qing and Yang, Linjie and Liao, Zhenyu and Qian, Xiaoning},
+  booktitle={The British Machine Vision Conference},
+  year={2020}
 }
-@article{jin2019adabits,
+@article{jin2020adabits,
   title={AdaBits: Neural Network Quantization with Adaptive Bit-Widths},
   author={Jin, Qing and Yang, Linjie and Liao, Zhenyu},
-  year={2019}
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year={2020}
 }
 ```
