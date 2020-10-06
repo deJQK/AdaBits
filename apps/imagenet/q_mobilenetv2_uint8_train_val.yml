@@ -1,0 +1,76 @@
+# =========================== Basic Settings ===========================
+# machine info
+num_gpus_per_job: 4  # number of gpus each job need
+num_cpus_per_job: 63  # number of cpus each job need
+memory_per_job: 200  # memory requirement each job need
+gpu_type: "nvidia-tesla-p100"
+
+# data
+dataset: imagenet1k
+data_transforms: imagenet1k_basic
+data_loader: imagenet1k_basic
+dataset_dir: data
+data_loader_workers: 5 #10
+
+# info
+num_classes: 1000
+image_size: 224
+topk: [1, 5]
+num_epochs: 150
+
+# optimizer
+optimizer: sgd
+momentum: 0.9
+weight_decay: 0.00004
+nesterov: True
+
+# lr
+lr: 0.1
+lr_scheduler: cos_annealing_iter
+
+# model profiling
+profiling: [gpu]
+#model_profiling_verbose: True
+
+# pretrain, resume, test_only
+pretrained_dir: ''
+pretrained_file: ''
+resume: ''
+test_only: False
+
+#
+random_seed: 1995
+batch_size: 256 #512 #256 #1024 #4096 #1024 #256
+model: ''
+reset_parameters: True
+
+#
+distributed: True
+distributed_all_reduce: True
+use_diff_seed: True
+
+#
+width_divisor: 8
+min_width: 1
+stats_sharing: False
+
+#
+rescale: True #False
+rescale_conv: False
+switchbn: True
+clamp: True
+normalize: False
+bn_calib: False
+rescale_type: constant #[stddev, constant]
+
+#
+switch_alpha: True
+
+# =========================== Override Settings ===========================
+#fp_pretrained_file: /path/to/best_model.pt
+log_dir: ./results/imagenet/mobilenetv2
+adaptive_training: True
+model: models.q_mobilenet_v2
+bits_list: [8, 6, 5, 4]
+weight_only: False
+data_transforms: imagenet1k_mobile
