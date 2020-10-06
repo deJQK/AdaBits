@@ -15,7 +15,7 @@ class q_k(Function):
         bit is only defined on positive integer values.
     """
     @staticmethod
-    def forward(ctx, input, bit, scheme='novel'):
+    def forward(ctx, input, bit, scheme='original'):
         assert bit > 0
         assert torch.all(input >= 0) and torch.all(input <= 1)
         if scheme == 'original':
