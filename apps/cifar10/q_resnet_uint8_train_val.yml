@@ -81,5 +81,5 @@ log_dir: ./results/cifar10/resnet20
 adaptive_training: True
 model: models.q_resnet_cifar
 depth: 20
-bits_list: [4]
+bits_list: [5,4,3]
 weight_only: False

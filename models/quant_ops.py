@@ -267,7 +267,7 @@ class QLinear(nn.Linear):
                    weight.mul_(weight_scale)
         bias = self.bias
         if bias is not None and getattr(FLAGS, 'rescale', True) and not self.training:
-                bias.div_(weight_scale)
+                bias = bias / weight_scale
 
         if (bita < 32 and not self.weight_only) or self.pact_fp:
             if getattr(FLAGS, 'switch_alpha', False):
