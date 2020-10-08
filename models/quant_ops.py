@@ -112,7 +112,7 @@ class QConv2d(nn.Conv2d):
         else:
             self.alpha = nn.Parameter(torch.tensor(8.0))
 
-    def forward(self, input, bitw, bita):
+    def forward(self, input):
         if self.same_padding:
             ih, iw = input.size()[-2:]
             kh, kw = self.weight.size()[-2:]
@@ -222,7 +222,7 @@ class QLinear(nn.Linear):
         else:
             self.alpha = nn.Parameter(torch.tensor(10.0))
 
-    def forward(self, input, bitw, bita):
+    def forward(self, input):
         bitw, bita = self.get_bits()
 
         weight_quant_scheme = getattr(FLAGS, 'weight_quant_scheme', 'modified')
