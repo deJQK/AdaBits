@@ -73,7 +73,8 @@ class Model(nn.Module):
                         QConv2d(
                             3, channels, 3,
                             first_stride, 1, bias=False,
-                            bitw_min=8, bita_min=8),
+                            bitw_min=8, bita_min=8,
+                            weight_only=True),
                         SwitchBN2d(channels, affine=not getattr(FLAGS, 'stats_sharing', False)),
                         nn.ReLU(inplace=True),
                     )

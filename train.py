@@ -682,7 +682,7 @@ def train_val_test():
                     k_new = k.split('bn')[0] + 'bn' + k.split('bn')[1][0] + str(bn_idx) + k.split('bn')[1][2:]
                     mprint(k)
                     mprint(k_new)
-                    checkpoint[k_new] = model_dict[k]
+                    checkpoint[k_new] = checkpoint[k]
         if getattr(FLAGS, 'switch_alpha', False):
             for k, v in checkpoint.items():
                 if 'alpha' in k and checkpoint[k].size() != model_dict[k].size():

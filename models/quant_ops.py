@@ -174,7 +174,7 @@ class QConv2d(nn.Conv2d):
             else:
                 alpha = torch.abs(self.alpha)
             if self.double_side:
-                input_val = torch.where(input_val > -alpha, input, -alpha)
+                input_val = torch.where(input > -alpha, input, -alpha)
             else:
                 input_val = torch.relu(input)
             input_val = torch.where(input_val < alpha, input_val, alpha)
