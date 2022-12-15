@@ -26,6 +26,10 @@ class q_k(Function):
             a = 1 << bit
             res = torch.floor(a * input)
             res.clamp_(max=a - 1).div_(a)
+        elif scheme == 'centered':
+            a = 1 << bit
+            res = torch.floor(a * input)
+            res.clamp_(max=a - 1).add_(0.5).div_(a)
         else:
             raise NotImplementedError
         assert torch.all(res >= 0) and torch.all(res <= 1)

@@ -24,9 +24,13 @@ Illustration of neural network quantization with scale-adjusted training and ada
     * If you still have questions, please search closed issues first. If the problem is not solved, please open a new.
 
 
+<!--
 ## Model Zoo
 
 All models are available at /mnt/cephfs\_new\_wj/uslabcv/jinq/qnn/imagenet/checkpoints/
+-->
+
+## Training Settings
 
 All settings are
 
@@ -42,6 +46,30 @@ rescale\_conv=False
 
 For all adaptive models, switchbn=True, switch\_alpha=True
 
+## Centered Weight Quantization for Low Precision
+
+For convergent training, it is beneficial to have vanishing mean for weight distribution, besides proper variance. To this end, we should use the following quantization method for weights:
+
+$$
+q = 2 \cdot \frac{1}{2^b}\Bigg(\mathrm{clip}\bigg(\Big\lfloor 2^b\cdot\frac{w+1}{2} \Big\rfloor,0,2^b-1\bigg)+\frac{1}{2}\Bigg) - 1
+$$
+
+(also check [this](https://github.com/deJQK/AdaBits/issues/3#issuecomment-1353286414))
+
+The following table compares the different quantization schemes.
+
+<table cellpadding="0" cellspacing="0" >
+  <tr>
+    <td align="center">Original<br> <img src="quant_schemes_plots/original_scheme.png" width=400px></td>
+    <td align="center">Modified<br> <img src="quant_schemes_plots/modified_scheme.png" width=400px></td>
+    <br>
+    <td align="center">Centered Symmetric<br> <img src="quant_schemes_plots/centered_symmetric_scheme.png" width=200px></td>
+    <td align="center">Centered Asymmetric<br> <img src="quant_schemes_plots/centered_asymmetric_scheme.png" width=200px></td>
+  </tr>
+</table>
+
+
+The code for the above is also [available](https://github.com/deJQK/AdaBits/blob/master/models/quant_ops.py#L29-L32). 
 
 ## Technical Details
 
