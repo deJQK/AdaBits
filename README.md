@@ -60,11 +60,10 @@ The following table compares the different quantization schemes.
 
 <table cellpadding="0" cellspacing="0" >
   <tr>
-    <td align="center">Original<br> <img src="quant_schemes_plots/original_scheme.png" width=400px></td>
-    <td align="center">Modified<br> <img src="quant_schemes_plots/modified_scheme.png" width=400px></td>
-    <br>
-    <td align="center">Centered Symmetric<br> <img src="quant_schemes_plots/centered_symmetric_scheme.png" width=200px></td>
-    <td align="center">Centered Asymmetric<br> <img src="quant_schemes_plots/centered_asymmetric_scheme.png" width=200px></td>
+    <td align="center">Original<br> <img src="quant_schemes_plots/original_scheme.png" width=300px></td>
+    <td align="center">Modified<br> <img src="quant_schemes_plots/modified_scheme.png" width=300px></td>
+    <td align="center">Centered Symmetric<br> <img src="quant_schemes_plots/centered_symmetric_scheme.png" width=300px></td>
+    <td align="center">Centered Asymmetric<br> <img src="quant_schemes_plots/centered_asymmetric_scheme.png" width=300px></td>
   </tr>
 </table>
 
